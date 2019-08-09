@@ -18,3 +18,8 @@ username VARCHAR,
 departmentid VARCHAR,
 role VARCHAR,
 );
+CREATE TABLE IF NOT EXISTS departments_users (
+ id int PRIMARY KEY auto_increment,
+ userid INTEGER,
+ departmentid INTEGER
+);

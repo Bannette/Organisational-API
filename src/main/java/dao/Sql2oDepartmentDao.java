@@ -90,4 +90,9 @@ public class Sql2oDepartmentDao implements DepartmentDao{
                     .executeAndFetch(News.class);
         }
     }
+
+    @Override
+    public void update(int id, String departmentName, String description, int numberOfEmployees) {
+
+    }
 }
