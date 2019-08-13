@@ -9,7 +9,7 @@ OUTPUT: Squad created.
 # PROJECT SETUP INSTRUCTION
 * Installed editor which on my preference is intellJ
 * Installed git vasual control(for tracking my changes)
-* Clone to this repository to your local machine to get Started 
+* Clone to this repository to your local machine to get Started https://github.com/Bannette/Organisational-API
  
  You need the following installed on your machine
 
