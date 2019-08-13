@@ -1,0 +1,27 @@
+{{#partial "content"}}
+
+    <form action="/departments" method="post" >
+        <div class="form-group">
+            <label for="departmentName">Department Name</label>
+            <select name="departmentName" class="form-control" required>
+                <option>Accounting</option>
+                <option>Statistics</option>
+                <option>Programming</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="type">Description</label>
+            <input type="text" name="description" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="numberOfEmployees">Number of employees</label>
+            <input type="number" id="numberOfEmployees" name="numberOfEmployees" class="form-control" required>
+        </div>
+        <button type="submit" class="button btn-success">Submit</button>
+    </form>
+
+    <br>
+    <br>
+{{/partial}}
+
+{{>layout.hbs}}
