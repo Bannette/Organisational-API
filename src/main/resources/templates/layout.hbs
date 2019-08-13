@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>{{#block "title"}}Blog{{/block}}</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' />
-    <link rel='stylesheet' href='css/styles.css' />
+    <title>{{#block "title"}}Organisation News{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/css/style.css'>
+
 </head>
 <body>
-<!--begin main template-->
-<div class="container">
-    {{#block "content"}}
-    {{/block}}
+<div>
+    <ul class="nav nav-tabs nav justify-content-end">
+        <li role="presentation"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/departments/new">Department</a></li>
+        <li role="presentation"><a href="/users">Employees</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="col-md-8 offset-md-2">
+            {{#block "content"}}
+            {{/block}}
+
+        </div>
+    </div>
 </div>
-<!--end main template-->
+
 {{#block "footer"}}
-</body>
-</html>
+    </body>
+    </html>
 {{/block}}
