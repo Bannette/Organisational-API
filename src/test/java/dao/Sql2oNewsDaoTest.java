@@ -16,7 +16,7 @@ public class Sql2oNewsDaoTest {
     private  static Sql2oUserDao userDao;
     @BeforeClass
     public static void setUp() throws Exception {
-        String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_api_test";
+        String connectionString = "jdbc:postgresql://localhost:5432/apis_test";
         Sql2o sql2o = new Sql2o(connectionString, "user", "666Nikol-");
         departmentDao = new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);

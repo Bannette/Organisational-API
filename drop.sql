@@ -1,0 +1,3 @@
+
+DROP DATABASE apis_test;
+DROP DATABASE apis;

@@ -1,5 +1,5 @@
 package dao;
-import models.Department;
+
 import models.User;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;

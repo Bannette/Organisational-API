@@ -19,31 +19,20 @@ import static spark.Spark.*;
 
 public class App {
 
-    static int getHerokuAssignedPort() {
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        if (processBuilder.environment().get("PORT") != null) {
-            return Integer.parseInt(processBuilder.environment().get("PORT"));
-        }
-        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
-    }
-
     public static void main(String[] args) {
-        staticFileLocation("/public");
-        port(getHerokuAssignedPort());
-
-        Sql2oUserDao userDao;
         Sql2oDepartmentDao departmentDao;
         Sql2oNewsDao newsDao;
+        Sql2oUserDao userDao;
         Connection conn;
         Gson gson = new Gson();
 
-        String connectionString = "jdbc:postgresql://localhost:5432/organisational_news_api";
+        String connectionString = "jdbc:postgresql://localhost:5432/apis";
         Sql2o sql2o = new Sql2o(connectionString, "user", "666Nikol-");
-        departmentDao = new Sql2oDepartmentDao(sql2o);
-        userDao = new Sql2oUserDao(sql2o);
-        newsDao = new Sql2oNewsDao(sql2o);
-        conn = sql2o.open();
 
+        departmentDao = new Sql2oDepartmentDao(sql2o);
+        newsDao = new Sql2oNewsDao(sql2o);
+        userDao = new Sql2oUserDao(sql2o);
+        conn = sql2o.open();
         //CREATE
 
         post("/departments/new", "application/json", (req, res) -> {
